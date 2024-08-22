@@ -36,6 +36,14 @@ class TodoBook:
         new_list = [todo for todo in self.todos.values() if Todo.completed]
         return new_list
 
-
+    def tags_todo_count(self) -> dict:
+        tag_count = {}
+        for todo in self.todos.values():
+            for tag in todo.tags:
+                if tag in tag_count:
+                    tag_count[tag] += 1
+                else:
+                    tag_count[tag] = 1
+        return tag_count
 
 
