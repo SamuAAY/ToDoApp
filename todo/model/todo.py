@@ -7,4 +7,6 @@ class Todo:
         self.tags: list = []
         self.completed: bool = False
 
+    def mark_completed(self):
+        self.completed = True
 
