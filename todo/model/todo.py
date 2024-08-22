@@ -22,4 +22,12 @@ class TodoBook:
     def __init__(self, todos: dict):
         self.todos: dict = {}
 
+    def add_todo(self, title: str, description: str) -> int:
+        new_id = len(self.todos) + 1
+        new_todo = Todo(new_id, title, description)
+        self.todos[new_id] = new_todo
+        return new_id
+
+
+
 
