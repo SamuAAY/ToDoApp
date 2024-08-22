@@ -32,6 +32,10 @@ class TodoBook:
         new_list = [todo for todo in self.todos.values() if not Todo.completed]
         return new_list
 
+    def completed_todos(self) -> Todo:
+        new_list = [todo for todo in self.todos.values() if Todo.completed]
+        return new_list
+
 
 
 
